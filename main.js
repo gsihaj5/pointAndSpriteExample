@@ -58,7 +58,9 @@ function initRenderer() {
 }
 
 function initPoint() {
-    point = new THREE.Points(cube.geometry, cube.material);
+    const material = new THREE.PointsMaterial({color: 0x888888});
+    point = new THREE.Points(cube.geometry, material);
+    point.material.size = 0.2;
     scene.add(point);
 }
 
