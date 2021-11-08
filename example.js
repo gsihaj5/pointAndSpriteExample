@@ -75,6 +75,8 @@ function init() {
         side: THREE.BackSide,
     });
     var skyBox = new THREE.Mesh(skyBoxGeometry, skyBoxMaterial);
+
+    skyBox;
     // scene.add(skyBox);
     cene.fog = new THREE.FogExp2(0x9999ff, 0.00025);
 
@@ -175,5 +177,3 @@ function TextureAnimator(
         }
     };
 }
-
-s;

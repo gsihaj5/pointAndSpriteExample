@@ -58,7 +58,8 @@ function initRenderer() {
 }
 
 function initPoint() {
-    const material = new THREE.PointsMaterial({color: 0x888888});
+    let image = new THREE.TextureLoader().load('assets/icecrystal.png');
+    const material = new THREE.PointsMaterial({color: 0x888888, map: image});
     point = new THREE.Points(cube.geometry, material);
     point.material.size = 0.2;
     scene.add(point);
